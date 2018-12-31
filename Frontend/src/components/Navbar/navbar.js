@@ -87,7 +87,7 @@ const styles = theme => ({
 		}
 	},
 	avatar: {
-		margin: 5,
+		margin: 0,
 	}
 });
 
@@ -159,8 +159,9 @@ class PrimarySearchAppBar extends React.Component {
 				</MenuItem>
 				<MenuItem onClick={this.handleProfileMenuOpen}>
 					<IconButton color="inherit">
-						<AccountCircle />
+						{/* <AccountCircle /> */}
 						{/* <Avatar alt="Raghav" src="../../Raghvendra_Dixit.jpg" className={classes.avatar} /> */}
+						<Avatar alt="Raghav" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzcg_MPW_G_TTe2t6Fwcc2CHSBVSjv-48Ps7fFLjwh5Q5Y6gnp" className={classes.avatar} />
 					</IconButton>
 					<p>Profile</p>
 				</MenuItem>
@@ -201,7 +202,7 @@ class PrimarySearchAppBar extends React.Component {
 						<button className = "btn btn-primary">Search</button>
 						<div className={classes.grow} />
 						<div className={classes.sectionDesktop} style ={{marginRight: '2px'}}>
-							<Typography style={{ paddingTop: '8px' }}
+							<Typography style={{ paddingTop: '14px' }}
 								className={classes.title}
 								variant="h6"
 								color="inherit"
@@ -226,7 +227,8 @@ class PrimarySearchAppBar extends React.Component {
 								color="inherit"
 							>
 								{/* <AccountCircle /> */}
-								<Avatar alt="Raghav" src="../../user.png" className={classes.avatar} />
+								<Avatar alt="Raghav" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzcg_MPW_G_TTe2t6Fwcc2CHSBVSjv-48Ps7fFLjwh5Q5Y6gnp" className={classes.avatar} />
+								{/* <Avatar alt="Raghav" src="../../../public/profile.png" className={classes.avatar} /> */}
 							</IconButton>
 						</div>
 						<div className={classes.sectionMobile}>
