@@ -17,6 +17,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Avatar from '@material-ui/core/Avatar';
+import Popover from '@material-ui/core/Popover';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
 	root: {
@@ -88,7 +90,28 @@ const styles = theme => ({
 	},
 	avatar: {
 		margin: 0,
-	}
+	},
+	button: {
+		margin: theme.spacing.unit,
+		border: '1px solid white',
+		color: '#fff',
+		'&:hover': {
+			backgroundColor: '#242f44',
+			borderColor: '#fff',
+		  },
+		  fontFamily: [
+			'-apple-system',
+			'BlinkMacSystemFont',
+			'"Segoe UI"',
+			'Roboto',
+			'"Helvetica Neue"',
+			'Arial',
+			'sans-serif',
+			'"Apple Color Emoji"',
+			'"Segoe UI Emoji"',
+			'"Segoe UI Symbol"',
+		  ]
+	},
 });
 
 class PrimarySearchAppBar extends React.Component {
@@ -199,7 +222,8 @@ class PrimarySearchAppBar extends React.Component {
 								}}
 							/>
 						</div>
-						<button className = "btn btn-primary">Search</button>
+						{/* <button className = "btn btn-primary">Search</button> */}
+						<Button size="small" variant="outlined" className={classes.button}>Search</Button>
 						<div className={classes.grow} />
 						<div className={classes.sectionDesktop} style ={{marginRight: '2px'}}>
 							<Typography style={{ paddingTop: '14px' }}
