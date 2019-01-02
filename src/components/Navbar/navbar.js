@@ -17,6 +17,8 @@ import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
 import Avatar from '@material-ui/core/Avatar';
+import Popover from '@material-ui/core/Popover';
+import Button from '@material-ui/core/Button';
 
 const styles = theme => ({
 	root: {
@@ -87,8 +89,29 @@ const styles = theme => ({
 		}
 	},
 	avatar: {
-		margin: 5,
-	}
+		margin: 0,
+	},
+	button: {
+		margin: theme.spacing.unit,
+		border: '1px solid white',
+		color: '#fff',
+		'&:hover': {
+			backgroundColor: '#242f44',
+			borderColor: '#fff',
+		  },
+		  fontFamily: [
+			'-apple-system',
+			'BlinkMacSystemFont',
+			'"Segoe UI"',
+			'Roboto',
+			'"Helvetica Neue"',
+			'Arial',
+			'sans-serif',
+			'"Apple Color Emoji"',
+			'"Segoe UI Emoji"',
+			'"Segoe UI Symbol"',
+		  ]
+	},
 });
 
 class PrimarySearchAppBar extends React.Component {
@@ -159,8 +182,9 @@ class PrimarySearchAppBar extends React.Component {
 				</MenuItem>
 				<MenuItem onClick={this.handleProfileMenuOpen}>
 					<IconButton color="inherit">
-						<AccountCircle />
+						{/* <AccountCircle /> */}
 						{/* <Avatar alt="Raghav" src="../../Raghvendra_Dixit.jpg" className={classes.avatar} /> */}
+						<Avatar alt="Raghav" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzcg_MPW_G_TTe2t6Fwcc2CHSBVSjv-48Ps7fFLjwh5Q5Y6gnp" className={classes.avatar} />
 					</IconButton>
 					<p>Profile</p>
 				</MenuItem>
@@ -198,10 +222,11 @@ class PrimarySearchAppBar extends React.Component {
 								}}
 							/>
 						</div>
-						<button className = "btn btn-primary">Search</button>
+						{/* <button className = "btn btn-primary">Search</button> */}
+						<Button size="small" variant="outlined" className={classes.button}>Search</Button>
 						<div className={classes.grow} />
 						<div className={classes.sectionDesktop} style ={{marginRight: '2px'}}>
-							<Typography style={{ paddingTop: '8px' }}
+							<Typography style={{ paddingTop: '14px' }}
 								className={classes.title}
 								variant="h6"
 								color="inherit"
@@ -226,7 +251,8 @@ class PrimarySearchAppBar extends React.Component {
 								color="inherit"
 							>
 								{/* <AccountCircle /> */}
-								<Avatar alt="Raghav" src="../../user.png" className={classes.avatar} />
+								<Avatar alt="Raghav" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzcg_MPW_G_TTe2t6Fwcc2CHSBVSjv-48Ps7fFLjwh5Q5Y6gnp" className={classes.avatar} />
+								{/* <Avatar alt="Raghav" src="../../../public/profile.png" className={classes.avatar} /> */}
 							</IconButton>
 						</div>
 						<div className={classes.sectionMobile}>
