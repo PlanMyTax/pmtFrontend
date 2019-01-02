@@ -208,7 +208,7 @@ class PrimarySearchAppBar extends React.Component {
 							color="inherit"
 							noWrap
 						>
-							<b>Lekha Jokha</b>
+							<b>Plan MyTax</b>
 						</Typography>
 						<div className={classes.search}>
 							<div className={classes.searchIcon}>
